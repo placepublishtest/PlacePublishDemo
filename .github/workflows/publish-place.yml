@@ -1,10 +1,10 @@
-name: API Key GH Action Example
+name: Place Publish via API Key Example
 on:
     push:
         branches:
             - master
 jobs:
-  API-Key-GH-Action:
+  API-Key-Place-Publish-GH-Action:
     runs-on: ubuntu-latest
     steps:
         - name: Check out repository code

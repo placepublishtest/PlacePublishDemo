@@ -1,0 +1,14 @@
+name: API Key GH Action Example
+on:
+    push:
+        branches:
+            - master
+jobs:
+  API-Key-GH-Action:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Check out repository code
+          uses: actions/checkout@v2
+        - name: Publish Place File
+          run: |
+                curl -X POST --fail -d @${{ github.workspace }}/Place1.rbxl  -H "Content-Type: text/xml"  -H   "X-API-Key: a3Q02KATP0CfG52PQNZaEBUvEEqznJzc+QmnYCvjAPL0J6us" "https://apis.roblox.com/universes/v1/2949912064/places/7592427644/versions?versionType=Published"
